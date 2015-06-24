@@ -38,29 +38,27 @@ end
 
 M = X;
 EpochCenter=temp.S_star;
-%EpochCenter2=zeros(svp,svp);temp.L_star;
+
 S = zeros( m, n);
 L = zeros( m, n);
 W = zeros( m, n);
-%Y = zeros( m, n);
+
 Z = zeros( m, n);
-%U = zeros( m, n);
+
 G = zeros( m, n);
-%S_sum=zeros(m,n);
-%EpochCenter=zeros(m,n);
+
 Sold=zeros(p,p);
-%W = zeros( m, n);
-%eta=1/100;
+
 
 TIME=50; %time in seconds for algorith
 total_svd = 0;
 alg_iter=12; %number of iterations of the algorithm. can be changed by the user
-%alpha=1;
+
 
 
 multiplier=1.5;
 dnorm = norm(X, 'fro');
-tolProj = 1e-6 * dnorm; %-6
+tolProj = 1e-6 * dnorm; 
 total_svd = 0;
 
 % initialize
@@ -71,9 +69,9 @@ dual_norm = max(norm_two, norm_inf);
 Z = Z / dual_norm;
 rho = .5/norm_two ;
 rho_bar = rho * 1e7;
-%rho=1;
+
 tau=rho; %dont change
-%rhox=10;
+
 tauK=1; %dont change
 
 
@@ -82,9 +80,9 @@ KK=100;
 iter = 0;
 converged = false;
 stopCriterion = 1;
-sv = 10;%5;
+sv = 10;
 svp = sv;
-mu=1; %dont change
+mu=1; 
 sigma=1;
 
 tic
@@ -93,7 +91,7 @@ tic
 for k=1:alg_iter
         telapsed=toc(tstart);
         if telapsed > TIME
-      stopCriterion = norm(X-S-L, 'fro') / norm(X, 'fro')%dnorm;
+      stopCriterion = norm(X-S-L, 'fro') / norm(X, 'fro')
     
       test_err = norm(L-temp.L_star, 'fro') / norm(temp.L_star, 'fro')
         test_err2 = norm(S-temp.S_star, 'fro') / norm(temp.S_star, 'fro')
@@ -179,7 +177,7 @@ for k=1:alg_iter
     else
                     S=W;
     end
-%S=W;
+
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
     
     Gb=M-S+1/rho*Z;%L+tauK*G;
