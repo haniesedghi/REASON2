@@ -8,7 +8,7 @@ This repository provides Matlab codes for running REASON 2. This paper will be p
 The long version can be accessed at
 http://arxiv.org/abs/1402.5131
 
-The code uses the PROPACK package from IALM to make a fair comparison with IALM. To access the package use the following link
+The code uses the PROPACK package (and choosvd.m)  from IALM to make a fair comparison with IALM. To access the package use the following link
 http://perception.csl.illinois.edu/matrix-rank/sample_code.html
 and download IALM codes.
 
