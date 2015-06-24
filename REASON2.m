@@ -1,3 +1,9 @@
+%The code is written by Hanie Sedghi (hsedghi@usc.edu)
+%The setting is for the experiments discussed for REASON2 in 
+% http://papers.nips.cc/paper/5613-multi-step-stochastic-admm-in-high-dimensions-applications-to-sparse-optimization-and-matrix-decomposition.pdf
+%For other problems you can easily replace the sampling and projections if
+% needed
+
 function REASON2 
 clc
 clear all
